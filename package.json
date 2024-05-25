@@ -1,0 +1,16 @@
+{
+  "name": "node-ts-init",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xzdadada/node-ts-init.git",
+  "author": "0h_x0 <U202111997@hust.edu.cn>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts"
+  }
+}
