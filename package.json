@@ -4,13 +4,28 @@
   "main": "index.js",
   "repository": "https://github.com/xzdadada/node-ts-init.git",
   "author": "0h_x0 <U202111997@hust.edu.cn>",
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
-  },
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "start": "node ./dist/index.js",
+    "build": "rimraf ./dist && tsc && tsc-alias",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "format:all": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx)\"",
+    "format:check": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|jsx|tsx)\""
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "tsc-alias": "^1.8.8",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   }
 }
